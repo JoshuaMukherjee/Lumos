@@ -12,7 +12,7 @@ http.createServer(function (req, res) {
         res.write(data);
 
         var params = url.parse(req.url,true).query;
-        console.log(params);
+        console.log(params.state);
 
         return res.end();
       });
