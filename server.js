@@ -13,10 +13,21 @@ http.createServer(function (req, res) {
 
         var params = url.parse(req.url,true).query;
         if(params.state == 1){
-            console.log(1); //TODO turn light on
+            left()
         }else if(params.state == 0){
-            console.log(0); //TODO turn light off
+            right()
         }
         return res.end();
       });
 }).listen(8080); //the server object listens on port 8080
+
+
+var left = function(){
+    //ON
+    console.log("on")
+}
+
+var right = function(){
+    //OFF
+    console.log("off")
+}
