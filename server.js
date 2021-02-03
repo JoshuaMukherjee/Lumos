@@ -32,14 +32,18 @@ var left = function(){
 var right = function(){
     //OFF
     motor.servoWrite(600)
+    await new Promise(r => setTimeout(r, 1000));
     console.log("off")
 
 }
 
 var resetMotor = function(){
     motor.servoWrite(1500);
+    await new Promise(r => setTimeout(r, 1000));
   // motor.servoWrite(0);
    console.log("reset");
 }
+
+
 
 
