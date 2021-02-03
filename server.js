@@ -25,6 +25,7 @@ http.createServer(function (req, res) {
 
 var left = function(){
     //ON
+    motor.servoWrite(2400)
     console.log("on")
 }
 
