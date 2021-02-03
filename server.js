@@ -32,7 +32,7 @@ var left = function(){
 
 var right = function(){
     //OFF
-    motor.servoWrite(600)
+    motor.servoWrite(700)
     console.log("off")
 
 }
