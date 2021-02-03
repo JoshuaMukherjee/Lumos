@@ -17,7 +17,8 @@ http.createServer(function (req, res) {
         }else if(params.state == 0){
             right()
         }
-	resetMotor();
+	    setTimeout(() => {  resetMotor() }, 1000);
+
         return res.end();
       });
 }).listen(8080); //the server object listens on port 8080
@@ -32,7 +33,6 @@ var left = function(){
 var right = function(){
     //OFF
     motor.servoWrite(600)
-    await new Promise(r => setTimeout(r, 1000));
     console.log("off")
 
 }
