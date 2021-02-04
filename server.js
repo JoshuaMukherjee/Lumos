@@ -9,8 +9,8 @@ const motor = new Gpio(14, {mode: Gpio.OUTPUT}); //create servo
 http.createServer(function (req, res) {
     fs.readFile('index.html', function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(data);
-	console.log("Starting");
+        res.write(data.toString());
+	    console.log("Starting");
         var params = url.parse(req.url,true).query;
         if(params.state == 1){
             left()
