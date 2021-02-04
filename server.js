@@ -7,7 +7,7 @@ const motor = new Gpio(14, { mode: Gpio.OUTPUT }); //create servo
 
 //create a server object:
 http.createServer(function (req, res) {
-    fs.readFile('index.html', function (err, data) {
+    fs.readFile('/home/pi/Lumos/index.html', function (err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(data);
         console.log("Starting");
