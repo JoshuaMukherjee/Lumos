@@ -39,8 +39,8 @@ var right = function(){
 
 var resetMotor = function(){
     motor.servoWrite(1500);
-  // motor.servoWrite(0);
-   console.log("reset");
+    setTimeout(() => {  motor.servoWrite(0); }, 500);
+    console.log("reset");
 }
 
 
