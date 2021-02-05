@@ -25,13 +25,13 @@ http.createServer(function (req, res) {
 
 
 var left = function () {
-    //ON
+    //OFF
     motor.servoWrite(2500)
     console.log("on")
 }
 
 var right = function () {
-    //OFF
+    //ON
     motor.servoWrite(500)
     console.log("off")
 
