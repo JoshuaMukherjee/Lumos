@@ -17,7 +17,7 @@ http.createServer(function (req, res) {
         } else if (params.state == 0) {
             right()
         }
-        setTimeout(() => { resetMotor() }, 1000);
+        setTimeout(() => { resetMotor() }, 500);
 
         return res.end();
     });
